@@ -1,0 +1,1 @@
+pyinstaller -F пб╧з╡║╤╬ещещлцсно╥.pyw

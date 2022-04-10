@@ -1,0 +1,37 @@
+What are sets in Python?
+How to add to set Python?
+What does hash do in Python?
+What is the use of the map function in Python?
+
+
+Sets in Python
+
+A set in Python is a collection of objects.
+
+Sets are available in Python 2.4 and newer versions. They are different from lists or tuples in that they are modeled after sets in mathematics.  
+
+Related course
+Complete Python Bootcamp: Go from zero to hero in Python
+
+Set example
+To create a set, we use the set() function.
+ 
+If we add the same item element multiple times, they are removed.  A set may not contain the same element multiple times.
+
+In this class, you¡¯ll discover what a Python Set is, what can you do with it and how to use it in programs. Moreover, you¡¯ll essentially learn how to create a Set, add/remove elements in it and all other operations that you can execute using Sets in Python.
+
+Python Set ¨C Introduction
+A set is a term which originates from Mathematics. It is a collection type which can store elements of different data types but doesn¡¯t index them in a particular order.
+
+
+With Sets, we can execute several mathematical operations such as Union, Intersection, Symmetric Difference, and Complement
+
+Python Set ¨C A Complete Guide to Get Started
+
+How To Instantiate A Set In Python?
+You can invoke any of the following two methods to create a Python Set.
+
+If you have a fixed set of elements, then group them using a comma as the separator and enclose the group inside curly braces.
+Another way is to call the built-in ¡°set()¡± method which can also be used to add elements at run-time.
+Also, remember, the elements can be of any types such as an integer, a float, a tuple, or strings, etc. The only exception with a Set is that it can¡¯t store a mutable item such as a list, a set or a dictionary.
+

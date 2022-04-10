@@ -1,0 +1,15 @@
+mport jieba
+txt = open(r'piao.txt','r',encoding='utf-8').read()
+ 
+wordsls=jieba.lcut(txt)
+wcdict={}
+for word in wordsls:
+    if len(word)==1:
+        continue
+    else:
+        wcdict[word]=wcdict.get(word,0)+1
+#word在wcdict中没有找到对应的词语，则返回0wcls=list(wcdict.items())
+wcls.sort(key=lambda x:x[1],reverse=True)
+ 
+for i in range(25):
+    print(wcls[i])

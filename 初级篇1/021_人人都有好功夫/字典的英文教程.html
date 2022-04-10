@@ -1,0 +1,301 @@
+<p>
+	<h1 style="color:#121214;font-weight:normal;text-align:center;font-family:Verdana, Geneva, Tahoma, Arial, Helvetica, sans-serif;">
+		Python - Dictionary
+	</h1>
+	<p>
+		<br />
+	</p>
+	<div class="clearer" style="color:#313131;font-family:Verdana, Geneva, Tahoma, Arial, Helvetica, sans-serif;font-size:14px;">
+	</div>
+	<hr />
+	<p style="text-align:justify;font-family:Verdana, Geneva, Tahoma, Arial, Helvetica, sans-serif;font-size:15px !important;">
+		Each key is separated from its value by a colon (:), the items are separated by commas, and the whole thing is enclosed in curly braces. An empty dictionary without any items is written with just two curly braces, like this: {}.
+	</p>
+	<p style="text-align:justify;font-family:Verdana, Geneva, Tahoma, Arial, Helvetica, sans-serif;font-size:15px !important;">
+		Keys are unique within a dictionary while values may not be. The values of a dictionary can be of any type, but the keys must be of an immutable data type such as strings, numbers, or tuples.
+	</p>
+	<h2 style="color:#121214;font-weight:normal;font-size:1.7em;font-family:Verdana, Geneva, Tahoma, Arial, Helvetica, sans-serif;">
+		Accessing Values in Dictionary
+	</h2>
+	<p style="text-align:justify;font-family:Verdana, Geneva, Tahoma, Arial, Helvetica, sans-serif;font-size:15px !important;">
+		To access dictionary elements, you can use the familiar square brackets along with the key to obtain its value. Following is a simple example ?
+	</p>
+<a href="http://tpcg.io/KTBDvD" target="_blank" class="demo"><i class="fa-external-link"></i>&nbsp;Live Demo</a> 
+<pre class="prettyprint notranslate prettyprinted"><span class="com" style="color:#880000;">#!/usr/bin/python</span><span class="pln"> dict </span><span class="pun" style="color:#666600;">=</span><span class="pln"> </span><span class="pun" style="color:#666600;">{</span><span class="str" style="color:#008800;">'Name'</span><span class="pun" style="color:#666600;">:</span><span class="pln"> </span><span class="str" style="color:#008800;">'Zara'</span><span class="pun" style="color:#666600;">,</span><span class="pln"> </span><span class="str" style="color:#008800;">'Age'</span><span class="pun" style="color:#666600;">:</span><span class="pln"> </span><span class="lit" style="color:#006666;">7</span><span class="pun" style="color:#666600;">,</span><span class="pln"> </span><span class="str" style="color:#008800;">'Class'</span><span class="pun" style="color:#666600;">:</span><span class="pln"> </span><span class="str" style="color:#008800;">'First'</span><span class="pun" style="color:#666600;">}</span><span class="pln"> </span><span class="kwd" style="color:#000088;">print</span><span class="pln"> </span><span class="str" style="color:#008800;">"dict['Name']: "</span><span class="pun" style="color:#666600;">,</span><span class="pln"> dict</span><span class="pun" style="color:#666600;">[</span><span class="str" style="color:#008800;">'Name'</span><span class="pun" style="color:#666600;">]</span><span class="pln"> </span><span class="kwd" style="color:#000088;">print</span><span class="pln"> </span><span class="str" style="color:#008800;">"dict['Age']: "</span><span class="pun" style="color:#666600;">,</span><span class="pln"> dict</span><span class="pun" style="color:#666600;">[</span><span class="str" style="color:#008800;">'Age'</span><span class="pun" style="color:#666600;">]</span></pre>
+	<p style="text-align:justify;font-family:Verdana, Geneva, Tahoma, Arial, Helvetica, sans-serif;font-size:15px !important;">
+		When the above code is executed, it produces the following result ?
+	</p>
+<pre class="result notranslate">dict['Name']:  Zara
+dict['Age']:  7
+</pre>
+	<p style="text-align:justify;font-family:Verdana, Geneva, Tahoma, Arial, Helvetica, sans-serif;font-size:15px !important;">
+		If we attempt to access a data item with a key, which is not part of the dictionary, we get an error as follows ?
+	</p>
+<a href="http://tpcg.io/pzUOPx" target="_blank" class="demo"><i class="fa-external-link"></i>&nbsp;Live Demo</a> 
+<pre class="prettyprint notranslate prettyprinted"><span class="com" style="color:#880000;">#!/usr/bin/python</span><span class="pln"> dict </span><span class="pun" style="color:#666600;">=</span><span class="pln"> </span><span class="pun" style="color:#666600;">{</span><span class="str" style="color:#008800;">'Name'</span><span class="pun" style="color:#666600;">:</span><span class="pln"> </span><span class="str" style="color:#008800;">'Zara'</span><span class="pun" style="color:#666600;">,</span><span class="pln"> </span><span class="str" style="color:#008800;">'Age'</span><span class="pun" style="color:#666600;">:</span><span class="pln"> </span><span class="lit" style="color:#006666;">7</span><span class="pun" style="color:#666600;">,</span><span class="pln"> </span><span class="str" style="color:#008800;">'Class'</span><span class="pun" style="color:#666600;">:</span><span class="pln"> </span><span class="str" style="color:#008800;">'First'</span><span class="pun" style="color:#666600;">}</span><span class="pln"> </span><span class="kwd" style="color:#000088;">print</span><span class="pln"> </span><span class="str" style="color:#008800;">"dict['Alice']: "</span><span class="pun" style="color:#666600;">,</span><span class="pln"> dict</span><span class="pun" style="color:#666600;">[</span><span class="str" style="color:#008800;">'Alice'</span><span class="pun" style="color:#666600;">]</span></pre>
+	<p style="text-align:justify;font-family:Verdana, Geneva, Tahoma, Arial, Helvetica, sans-serif;font-size:15px !important;">
+		When the above code is executed, it produces the following result ?
+	</p>
+<pre class="result notranslate">dict['Alice']:
+Traceback (most recent call last):
+   File "test.py", line 4, in &lt;module&gt;
+      print "dict['Alice']: ", dict['Alice'];
+KeyError: 'Alice'
+</pre>
+	<h2 style="color:#121214;font-weight:normal;font-size:1.7em;font-family:Verdana, Geneva, Tahoma, Arial, Helvetica, sans-serif;">
+		Updating Dictionary
+	</h2>
+	<p style="text-align:justify;font-family:Verdana, Geneva, Tahoma, Arial, Helvetica, sans-serif;font-size:15px !important;">
+		You can update a dictionary by adding a new entry or a key-value pair, modifying an existing entry, or deleting an existing entry as shown below in the simple example ?
+	</p>
+<a href="http://tpcg.io/porcg2" target="_blank" class="demo"><i class="fa-external-link"></i>&nbsp;Live Demo</a> 
+<pre class="prettyprint notranslate prettyprinted"><span class="com" style="color:#880000;">#!/usr/bin/python</span><span class="pln"> dict </span><span class="pun" style="color:#666600;">=</span><span class="pln"> </span><span class="pun" style="color:#666600;">{</span><span class="str" style="color:#008800;">'Name'</span><span class="pun" style="color:#666600;">:</span><span class="pln"> </span><span class="str" style="color:#008800;">'Zara'</span><span class="pun" style="color:#666600;">,</span><span class="pln"> </span><span class="str" style="color:#008800;">'Age'</span><span class="pun" style="color:#666600;">:</span><span class="pln"> </span><span class="lit" style="color:#006666;">7</span><span class="pun" style="color:#666600;">,</span><span class="pln"> </span><span class="str" style="color:#008800;">'Class'</span><span class="pun" style="color:#666600;">:</span><span class="pln"> </span><span class="str" style="color:#008800;">'First'</span><span class="pun" style="color:#666600;">}</span><span class="pln"> dict</span><span class="pun" style="color:#666600;">[</span><span class="str" style="color:#008800;">'Age'</span><span class="pun" style="color:#666600;">]</span><span class="pln"> </span><span class="pun" style="color:#666600;">=</span><span class="pln"> </span><span class="lit" style="color:#006666;">8</span><span class="pun" style="color:#666600;">;</span><span class="pln"> </span><span class="com" style="color:#880000;"># update existing entry</span><span class="pln"> dict</span><span class="pun" style="color:#666600;">[</span><span class="str" style="color:#008800;">'School'</span><span class="pun" style="color:#666600;">]</span><span class="pln"> </span><span class="pun" style="color:#666600;">=</span><span class="pln"> </span><span class="str" style="color:#008800;">"DPS School"</span><span class="pun" style="color:#666600;">;</span><span class="pln"> </span><span class="com" style="color:#880000;"># Add new entry</span><span class="pln"> </span><span class="kwd" style="color:#000088;">print</span><span class="pln"> </span><span class="str" style="color:#008800;">"dict['Age']: "</span><span class="pun" style="color:#666600;">,</span><span class="pln"> dict</span><span class="pun" style="color:#666600;">[</span><span class="str" style="color:#008800;">'Age'</span><span class="pun" style="color:#666600;">]</span><span class="pln"> </span><span class="kwd" style="color:#000088;">print</span><span class="pln"> </span><span class="str" style="color:#008800;">"dict['School']: "</span><span class="pun" style="color:#666600;">,</span><span class="pln"> dict</span><span class="pun" style="color:#666600;">[</span><span class="str" style="color:#008800;">'School'</span><span class="pun" style="color:#666600;">]</span></pre>
+	<p style="text-align:justify;font-family:Verdana, Geneva, Tahoma, Arial, Helvetica, sans-serif;font-size:15px !important;">
+		When the above code is executed, it produces the following result ?
+	</p>
+<pre class="result notranslate">dict['Age']:  8
+dict['School']:  DPS School
+</pre>
+	<h2 style="color:#121214;font-weight:normal;font-size:1.7em;font-family:Verdana, Geneva, Tahoma, Arial, Helvetica, sans-serif;">
+		Delete Dictionary Elements
+	</h2>
+	<p style="text-align:justify;font-family:Verdana, Geneva, Tahoma, Arial, Helvetica, sans-serif;font-size:15px !important;">
+		You can either remove individual dictionary elements or clear the entire contents of a dictionary. You can also delete entire dictionary in a single operation.
+	</p>
+	<p style="text-align:justify;font-family:Verdana, Geneva, Tahoma, Arial, Helvetica, sans-serif;font-size:15px !important;">
+		To explicitly remove an entire dictionary, just use the&nbsp;<span style="font-weight:640;">del</span>&nbsp;statement. Following is a simple example ?
+	</p>
+<a href="http://tpcg.io/mbvT73" target="_blank" class="demo"><i class="fa-external-link"></i>&nbsp;Live Demo</a> 
+<pre class="prettyprint notranslate prettyprinted"><span class="com" style="color:#880000;">#!/usr/bin/python</span><span class="pln"> dict </span><span class="pun" style="color:#666600;">=</span><span class="pln"> </span><span class="pun" style="color:#666600;">{</span><span class="str" style="color:#008800;">'Name'</span><span class="pun" style="color:#666600;">:</span><span class="pln"> </span><span class="str" style="color:#008800;">'Zara'</span><span class="pun" style="color:#666600;">,</span><span class="pln"> </span><span class="str" style="color:#008800;">'Age'</span><span class="pun" style="color:#666600;">:</span><span class="pln"> </span><span class="lit" style="color:#006666;">7</span><span class="pun" style="color:#666600;">,</span><span class="pln"> </span><span class="str" style="color:#008800;">'Class'</span><span class="pun" style="color:#666600;">:</span><span class="pln"> </span><span class="str" style="color:#008800;">'First'</span><span class="pun" style="color:#666600;">}</span><span class="pln"> </span><span class="kwd" style="color:#000088;">del</span><span class="pln"> dict</span><span class="pun" style="color:#666600;">[</span><span class="str" style="color:#008800;">'Name'</span><span class="pun" style="color:#666600;">];</span><span class="pln"> </span><span class="com" style="color:#880000;"># remove entry with key 'Name'</span><span class="pln"> dict</span><span class="pun" style="color:#666600;">.</span><span class="pln">clear</span><span class="pun" style="color:#666600;">();</span><span class="pln"> </span><span class="com" style="color:#880000;"># remove all entries in dict</span><span class="pln"> </span><span class="kwd" style="color:#000088;">del</span><span class="pln"> dict </span><span class="pun" style="color:#666600;">;</span><span class="pln"> </span><span class="com" style="color:#880000;"># delete entire dictionary</span><span class="pln"> </span><span class="kwd" style="color:#000088;">print</span><span class="pln"> </span><span class="str" style="color:#008800;">"dict['Age']: "</span><span class="pun" style="color:#666600;">,</span><span class="pln"> dict</span><span class="pun" style="color:#666600;">[</span><span class="str" style="color:#008800;">'Age'</span><span class="pun" style="color:#666600;">]</span><span class="pln"> </span><span class="kwd" style="color:#000088;">print</span><span class="pln"> </span><span class="str" style="color:#008800;">"dict['School']: "</span><span class="pun" style="color:#666600;">,</span><span class="pln"> dict</span><span class="pun" style="color:#666600;">[</span><span class="str" style="color:#008800;">'School'</span><span class="pun" style="color:#666600;">]</span></pre>
+	<p style="text-align:justify;font-family:Verdana, Geneva, Tahoma, Arial, Helvetica, sans-serif;font-size:15px !important;">
+		This produces the following result. Note that an exception is raised because after&nbsp;<span style="font-weight:640;">del dict</span>&nbsp;dictionary does not exist any more ?
+	</p>
+<pre class="result notranslate">dict['Age']:
+Traceback (most recent call last):
+   File "test.py", line 8, in &lt;module&gt;
+      print "dict['Age']: ", dict['Age'];
+TypeError: 'type' object is unsubscriptable
+</pre>
+	<p style="text-align:justify;font-family:Verdana, Geneva, Tahoma, Arial, Helvetica, sans-serif;font-size:15px !important;">
+		<span style="font-weight:640;">Note</span>&nbsp;? del() method is discussed in subsequent section.
+	</p>
+	<h2 style="color:#121214;font-weight:normal;font-size:1.7em;font-family:Verdana, Geneva, Tahoma, Arial, Helvetica, sans-serif;">
+		Properties of Dictionary Keys
+	</h2>
+	<p style="text-align:justify;font-family:Verdana, Geneva, Tahoma, Arial, Helvetica, sans-serif;font-size:15px !important;">
+		Dictionary values have no restrictions. They can be any arbitrary Python object, either standard objects or user-defined objects. However, same is not true for the keys.
+	</p>
+	<p style="text-align:justify;font-family:Verdana, Geneva, Tahoma, Arial, Helvetica, sans-serif;font-size:15px !important;">
+		There are two important points to remember about dictionary keys ?
+	</p>
+	<p style="text-align:justify;font-family:Verdana, Geneva, Tahoma, Arial, Helvetica, sans-serif;font-size:15px !important;">
+		<span style="font-weight:640;">(a)</span>&nbsp;More than one entry per key not allowed. Which means no duplicate key is allowed. When duplicate keys encountered during assignment, the last assignment wins. For example ?
+	</p>
+<a href="http://tpcg.io/rEJFby" target="_blank" class="demo"><i class="fa-external-link"></i>&nbsp;Live Demo</a> 
+<pre class="prettyprint notranslate prettyprinted"><span class="com" style="color:#880000;">#!/usr/bin/python</span><span class="pln"> dict </span><span class="pun" style="color:#666600;">=</span><span class="pln"> </span><span class="pun" style="color:#666600;">{</span><span class="str" style="color:#008800;">'Name'</span><span class="pun" style="color:#666600;">:</span><span class="pln"> </span><span class="str" style="color:#008800;">'Zara'</span><span class="pun" style="color:#666600;">,</span><span class="pln"> </span><span class="str" style="color:#008800;">'Age'</span><span class="pun" style="color:#666600;">:</span><span class="pln"> </span><span class="lit" style="color:#006666;">7</span><span class="pun" style="color:#666600;">,</span><span class="pln"> </span><span class="str" style="color:#008800;">'Name'</span><span class="pun" style="color:#666600;">:</span><span class="pln"> </span><span class="str" style="color:#008800;">'Manni'</span><span class="pun" style="color:#666600;">}</span><span class="pln"> </span><span class="kwd" style="color:#000088;">print</span><span class="pln"> </span><span class="str" style="color:#008800;">"dict['Name']: "</span><span class="pun" style="color:#666600;">,</span><span class="pln"> dict</span><span class="pun" style="color:#666600;">[</span><span class="str" style="color:#008800;">'Name'</span><span class="pun" style="color:#666600;">]</span></pre>
+	<p style="text-align:justify;font-family:Verdana, Geneva, Tahoma, Arial, Helvetica, sans-serif;font-size:15px !important;">
+		When the above code is executed, it produces the following result ?
+	</p>
+<pre class="result notranslate">dict['Name']:  Manni
+</pre>
+	<p style="text-align:justify;font-family:Verdana, Geneva, Tahoma, Arial, Helvetica, sans-serif;font-size:15px !important;">
+		<span style="font-weight:640;">(b)</span>&nbsp;Keys must be immutable. Which means you can use strings, numbers or tuples as dictionary keys but something like ['key'] is not allowed. Following is a simple example ?
+	</p>
+<a href="http://tpcg.io/BLKmXZ" target="_blank" class="demo"><i class="fa-external-link"></i>&nbsp;Live Demo</a> 
+<pre class="prettyprint notranslate prettyprinted"><span class="com" style="color:#880000;">#!/usr/bin/python</span><span class="pln"> dict </span><span class="pun" style="color:#666600;">=</span><span class="pln"> </span><span class="pun" style="color:#666600;">{[</span><span class="str" style="color:#008800;">'Name'</span><span class="pun" style="color:#666600;">]:</span><span class="pln"> </span><span class="str" style="color:#008800;">'Zara'</span><span class="pun" style="color:#666600;">,</span><span class="pln"> </span><span class="str" style="color:#008800;">'Age'</span><span class="pun" style="color:#666600;">:</span><span class="pln"> </span><span class="lit" style="color:#006666;">7</span><span class="pun" style="color:#666600;">}</span><span class="pln"> </span><span class="kwd" style="color:#000088;">print</span><span class="pln"> </span><span class="str" style="color:#008800;">"dict['Name']: "</span><span class="pun" style="color:#666600;">,</span><span class="pln"> dict</span><span class="pun" style="color:#666600;">[</span><span class="str" style="color:#008800;">'Name'</span><span class="pun" style="color:#666600;">]</span></pre>
+	<p style="text-align:justify;font-family:Verdana, Geneva, Tahoma, Arial, Helvetica, sans-serif;font-size:15px !important;">
+		When the above code is executed, it produces the following result ?
+	</p>
+<pre class="result notranslate">Traceback (most recent call last):
+   File "test.py", line 3, in &lt;module&gt;
+      dict = {['Name']: 'Zara', 'Age': 7};
+TypeError: unhashable type: 'list'
+</pre>
+	<h2 style="color:#121214;font-weight:normal;font-size:1.7em;font-family:Verdana, Geneva, Tahoma, Arial, Helvetica, sans-serif;">
+		Built-in Dictionary Functions &amp; Methods
+	</h2>
+	<p style="text-align:justify;font-family:Verdana, Geneva, Tahoma, Arial, Helvetica, sans-serif;font-size:15px !important;">
+		Python includes the following dictionary functions ?
+	</p>
+	<table class="table table-bordered" style="width:604px;border:1px solid #DDDDDD;color:#313131;font-family:Verdana, Geneva, Tahoma, Arial, Helvetica, sans-serif;font-size:14px;">
+		<tbody>
+			<tr>
+				<th style="text-align:center;background:#EEEEEE;vertical-align:top;border:1px solid #DDDDDD;">
+					Sr.No.
+				</th>
+				<th style="text-align:center;background:#EEEEEE;vertical-align:top;border:1px solid #DDDDDD;">
+					Function with Description
+				</th>
+			</tr>
+			<tr>
+				<td class="ts" style="text-align:center !important;vertical-align:top;border:1px solid #DDDDDD;">
+					1
+				</td>
+				<td style="vertical-align:top;border:1px solid #DDDDDD;">
+					<a href="https://www.tutorialspoint.com/python/dictionary_cmp.htm">cmp(dict1, dict2)</a>
+					<p style="color:#000000;text-align:justify;font-size:15px !important;">
+						Compares elements of both dict.
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td class="ts" style="text-align:center !important;vertical-align:top;border:1px solid #DDDDDD;">
+					2
+				</td>
+				<td style="vertical-align:top;border:1px solid #DDDDDD;">
+					<a href="https://www.tutorialspoint.com/python/dictionary_len.htm">len(dict)</a>
+					<p style="color:#000000;text-align:justify;font-size:15px !important;">
+						Gives the total length of the dictionary. This would be equal to the number of items in the dictionary.
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td class="ts" style="text-align:center !important;vertical-align:top;border:1px solid #DDDDDD;">
+					3
+				</td>
+				<td style="vertical-align:top;border:1px solid #DDDDDD;">
+					<a href="https://www.tutorialspoint.com/python/dictionary_str.htm">str(dict)</a>
+					<p style="color:#000000;text-align:justify;font-size:15px !important;">
+						Produces a printable string representation of a dictionary
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td class="ts" style="text-align:center !important;vertical-align:top;border:1px solid #DDDDDD;">
+					4
+				</td>
+				<td style="vertical-align:top;border:1px solid #DDDDDD;">
+					<a href="https://www.tutorialspoint.com/python/dictionary_type.htm">type(variable)</a>
+					<p style="color:#000000;text-align:justify;font-size:15px !important;">
+						Returns the type of the passed variable. If passed variable is dictionary, then it would return a dictionary type.
+					</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<p style="text-align:justify;font-family:Verdana, Geneva, Tahoma, Arial, Helvetica, sans-serif;font-size:15px !important;">
+		Python includes following dictionary methods ?
+	</p>
+	<table class="table table-bordered" style="width:604px;border:1px solid #DDDDDD;color:#313131;font-family:Verdana, Geneva, Tahoma, Arial, Helvetica, sans-serif;font-size:14px;">
+		<tbody>
+			<tr>
+				<th style="text-align:left;background:#EEEEEE;vertical-align:top;border:1px solid #DDDDDD;">
+					Sr.No.
+				</th>
+				<th style="text-align:left;background:#EEEEEE;vertical-align:top;border:1px solid #DDDDDD;">
+					Methods with Description
+				</th>
+			</tr>
+			<tr>
+				<td class="ts" style="text-align:center !important;vertical-align:top;border:1px solid #DDDDDD;">
+					1
+				</td>
+				<td style="vertical-align:top;border:1px solid #DDDDDD;">
+					<a href="https://www.tutorialspoint.com/python/dictionary_clear.htm">dict.clear()</a>
+					<p style="color:#000000;text-align:justify;font-size:15px !important;">
+						Removes all elements of dictionary&nbsp;<i>dict</i>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td class="ts" style="text-align:center !important;vertical-align:top;border:1px solid #DDDDDD;">
+					2
+				</td>
+				<td style="vertical-align:top;border:1px solid #DDDDDD;">
+					<a href="https://www.tutorialspoint.com/python/dictionary_copy.htm">dict.copy()</a>
+					<p style="color:#000000;text-align:justify;font-size:15px !important;">
+						Returns a shallow copy of dictionary&nbsp;<i>dict</i>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td class="ts" style="text-align:center !important;vertical-align:top;border:1px solid #DDDDDD;">
+					3
+				</td>
+				<td style="vertical-align:top;border:1px solid #DDDDDD;">
+					<a href="https://www.tutorialspoint.com/python/dictionary_fromkeys.htm">dict.fromkeys()</a>
+					<p style="color:#000000;text-align:justify;font-size:15px !important;">
+						Create a new dictionary with keys from seq and values&nbsp;<i>set</i>&nbsp;to&nbsp;<i>value</i>.
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td class="ts" style="text-align:center !important;vertical-align:top;border:1px solid #DDDDDD;">
+					4
+				</td>
+				<td style="vertical-align:top;border:1px solid #DDDDDD;">
+					<a href="https://www.tutorialspoint.com/python/dictionary_get.htm">dict.get(key, default=None)</a>
+					<p style="color:#000000;text-align:justify;font-size:15px !important;">
+						For&nbsp;<i>key</i>&nbsp;key, returns value or default if key not in dictionary
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td class="ts" style="text-align:center !important;vertical-align:top;border:1px solid #DDDDDD;">
+					5
+				</td>
+				<td style="vertical-align:top;border:1px solid #DDDDDD;">
+					<a href="https://www.tutorialspoint.com/python/dictionary_has_key.htm">dict.has_key(key)</a>
+					<p style="color:#000000;text-align:justify;font-size:15px !important;">
+						Returns&nbsp;<i>true</i>&nbsp;if key in dictionary&nbsp;<i>dict</i>,&nbsp;<i>false</i>&nbsp;otherwise
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td class="ts" style="text-align:center !important;vertical-align:top;border:1px solid #DDDDDD;">
+					6
+				</td>
+				<td style="vertical-align:top;border:1px solid #DDDDDD;">
+					<a href="https://www.tutorialspoint.com/python/dictionary_items.htm">dict.items()</a>
+					<p style="color:#000000;text-align:justify;font-size:15px !important;">
+						Returns a list of&nbsp;<i>dict</i>'s (key, value) tuple pairs
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td class="ts" style="text-align:center !important;vertical-align:top;border:1px solid #DDDDDD;">
+					7
+				</td>
+				<td style="vertical-align:top;border:1px solid #DDDDDD;">
+					<a href="https://www.tutorialspoint.com/python/dictionary_keys.htm">dict.keys()</a>
+					<p style="color:#000000;text-align:justify;font-size:15px !important;">
+						Returns list of dictionary dict's keys
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td class="ts" style="text-align:center !important;vertical-align:top;border:1px solid #DDDDDD;">
+					8
+				</td>
+				<td style="vertical-align:top;border:1px solid #DDDDDD;">
+					<a href="https://www.tutorialspoint.com/python/dictionary_setdefault.htm">dict.setdefault(key, default=None)</a>
+					<p style="color:#000000;text-align:justify;font-size:15px !important;">
+						Similar to get(), but will set dict[key]=default if&nbsp;<i>key</i>&nbsp;is not already in dict
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td class="ts" style="text-align:center !important;vertical-align:top;border:1px solid #DDDDDD;">
+					9
+				</td>
+				<td style="vertical-align:top;border:1px solid #DDDDDD;">
+					<a href="https://www.tutorialspoint.com/python/dictionary_update.htm">dict.update(dict2)</a>
+					<p style="color:#000000;text-align:justify;font-size:15px !important;">
+						Adds dictionary&nbsp;<i>dict2</i>'s key-values pairs to&nbsp;<i>dict</i>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td class="ts" style="text-align:center !important;vertical-align:top;border:1px solid #DDDDDD;">
+					10
+				</td>
+				<td style="vertical-align:top;border:1px solid #DDDDDD;">
+					<a href="https://www.tutorialspoint.com/python/dictionary_values.htm">dict.values()</a>
+					<p style="color:#000000;text-align:justify;font-size:15px !important;">
+						Returns list of dictionary&nbsp;<i>dict</i>'s values
+					</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</p>

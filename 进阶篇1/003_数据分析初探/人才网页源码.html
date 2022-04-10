@@ -1,0 +1,353 @@
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta charset="utf-8" /><meta name="renderer" content="webkit" /><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /><title>
+	九方人才-人才列表
+</title>
+    <script src="js/jquery.min.js" charset="utf-8"></script>
+    <script src="layui/layui.js" charset="utf-8"></script>
+    <script src="js/js.js" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="layui/css/layui.css" /><link rel="stylesheet" type="text/css" href="css/qccss.css" />
+    <script type="text/javascript" src="Js/PublicJS.js"></script>
+    <script src="js/PersonalList.js?time=new Date()" charset="utf-8"></script>
+</head>
+<body>
+    <form method="post" action="./PersonalList.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="B13F3F76" />
+</div>
+        <!--Header-->
+        
+<div style="position:fixed; right:0px; top:200px;"><img src="/images/wxerf.jpg" /></div>
+<div id="Header">
+<!--导航-->
+<div class="HeaderTop">
+<div class="ContentBox1200">
+<div id="Heard1_divTopLeft" class="HeaderTopLeft">欢迎登录九方人才网！请&nbsp;&nbsp;<span id="heardLogin" onclick="TopUserLogin();" class="FF30" style="cursor:pointer;">登录</span>&nbsp;&nbsp;或&nbsp;&nbsp;<span onclick="TopUserReg();" class="FF30" style="cursor:pointer;">免费注册</span></div>
+<div class="HeaderTopRight">
+<a href="/index.aspx" class="AF666"><i class="layui-icon layui-icon-home"></i> 访问首页</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+<a href="/Center.aspx" class="AF666"><i class="layui-icon layui-icon-username"></i> 用户中心</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+<a href="#" onclick="linkHelp()" class="AF666"><i class="layui-icon layui-icon-help"></i> 帮助中心</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+<a href="javascript:void(0);" class="AF666" onclick="toDesktop(location.href,'九方人才网');"><i class="layui-icon layui-icon-release"></i> 保存到桌面</a>&nbsp;&nbsp;&nbsp;&nbsp;
+</div>
+<div class="clear0"></div>
+<div class="HeaderNavLeft"><a href="/"><img src="/images/Top_031.png" id="toplogo"></a></div>
+<div class="HeaderNavCenter">
+<ul>
+<li><a href="/index.aspx" id="aindex" class="AHeaderNav">首页</a></li>
+<li><a href="/JobList.aspx" id="aJob" class="AHeaderNav">找工作</a></li>
+<li><a href="/PersonalList.aspx" id="aPersonal" class="AHeaderNav">找人才</a></li>
+<li><a href="/CitySameList.aspx?Type=1" id="aCitySame" class="AHeaderNav">找厂房</a></li>
+<li><a href="/InformationList.aspx" id="aInformation" class="AHeaderNav">资讯</a></li>
+<li><a href="/CitySameList.aspx" id="aCitySame1" class="AHeaderNav">同城</a></li>
+<li style="padding-left:40px;"><a href="javascript:void(0);" class="AHeaderNav1" onclick="TopPubCenter();">发布中心</a></li>
+</ul>
+<div class="clear0"></div>
+</div>
+<div class="HeaderNavRight"><img src="/images/Top_05.png" onclick="TopErwei();" class="apointer"></div>
+<div class="clear0"></div>
+</div>
+</div>
+<!--县市-->
+<div class="HeaderRegion">
+<div class="ContentBox1200">
+<div class="RegionTitle">区县招聘</div>
+<div class="RegionBox">
+<ul id="ulHeardArea">
+    
+            <li><a onclick="ClickHeardArea('360702','章贡区')" href='#' class="ARegionNav">章贡区</a></li><li>|</li>
+        
+            <li><a onclick="ClickHeardArea('360782','南康区')" href='#' class="ARegionNav">南康区</a></li><li>|</li>
+        
+            <li><a onclick="ClickHeardArea('360751','开发区')" href='#' class="ARegionNav">开发区</a></li><li>|</li>
+        
+            <li><a onclick="ClickHeardArea('360721','赣县区')" href='#' class="ARegionNav">赣县区</a></li><li>|</li>
+        
+            <li><a onclick="ClickHeardArea('360722','信丰县')" href='#' class="ARegionNav">信丰县</a></li><li>|</li>
+        
+            <li><a onclick="ClickHeardArea('360723','大余县')" href='#' class="ARegionNav">大余县</a></li><li>|</li>
+        
+            <li><a onclick="ClickHeardArea('360724','上犹县')" href='#' class="ARegionNav">上犹县</a></li><li>|</li>
+        
+            <li><a onclick="ClickHeardArea('360725','崇义县')" href='#' class="ARegionNav">崇义县</a></li><li>|</li>
+        
+            <li><a onclick="ClickHeardArea('360726','安远县')" href='#' class="ARegionNav">安远县</a></li><li>|</li>
+        
+            <li><a onclick="ClickHeardArea('360727','龙南县')" href='#' class="ARegionNav">龙南县</a></li><li>|</li>
+        
+            <li><a onclick="ClickHeardArea('360728','定南县')" href='#' class="ARegionNav">定南县</a></li><li>|</li>
+        
+            <li><a onclick="ClickHeardArea('360729','全南县')" href='#' class="ARegionNav">全南县</a></li><li>|</li>
+        
+            <li><a onclick="ClickHeardArea('360730','宁都县')" href='#' class="ARegionNav">宁都县</a></li><li>|</li>
+        
+            <li><a onclick="ClickHeardArea('360731','于都县')" href='#' class="ARegionNav">于都县</a></li><li>|</li>
+        
+            <li><a onclick="ClickHeardArea('360732','兴国县')" href='#' class="ARegionNav">兴国县</a></li><li>|</li>
+        
+            <li><a onclick="ClickHeardArea('360733','会昌县')" href='#' class="ARegionNav">会昌县</a></li><li>|</li>
+        
+            <li><a onclick="ClickHeardArea('360734','寻乌县')" href='#' class="ARegionNav">寻乌县</a></li><li>|</li>
+        
+            <li><a onclick="ClickHeardArea('360735','石城县')" href='#' class="ARegionNav">石城县</a></li><li>|</li>
+        
+            <li><a onclick="ClickHeardArea('360781','瑞金市')" href='#' class="ARegionNav">瑞金市</a></li><li>|</li>
+        
+</ul>
+<div class="clear0"></div>
+</div>
+</div>
+</div>
+<!---->
+</div>
+<script type="text/javascript">
+    function linkHelp() {
+        window.location.href = "/InformationList.aspx?NewType=8&ClassName=" + escape('帮助中心');
+    }
+
+    //头部点击县区
+    function ClickHeardArea(areaid, areaname) {
+        window.location.href = "/JobList.aspx?AreaID=" + areaid + "&AreaName=" + escape(areaname);
+    }
+
+    $(function () {
+
+        //登录状态,每个页面都要添加
+        p_IsUserLogin = 'False';
+        p_MemberType = '0';
+        console.log("页面登录状态值：" + p_IsUserLogin);
+        console.log("页面登录会员类型：" + p_MemberType);
+
+
+        var AreaID = GetQueryString("AreaID");
+        var AreaName = GetQueryString("AreaName");
+        if (AreaID != null && AreaID != "" && AreaName != null && AreaName != "") {
+            $("#ulHeardArea a").each(function () {
+                var text = $(this).text();
+                $(this).removeClass("ARegionNav2");
+                $(this).removeClass("ARegionNav");
+                if (text == unescape(AreaName)) {
+                    $(this).addClass("ARegionNav2");
+                }
+                else {
+                    $(this).addClass("ARegionNav");
+                }
+            });
+        }
+
+        var aurl = window.location.href;
+        if (aurl.indexOf("/PersonalCenter/") <= -1 && aurl.indexOf("/EnterpriseCenter/") <= -1 && aurl.indexOf("/IM/") <= -1) {
+            if (aurl.indexOf("index.aspx") > -1) {
+                $("#aindex").removeClass("AHeaderNav");
+                $("#aindex").addClass("AHeaderNav2");
+            }
+            else if (aurl.indexOf("Job") > -1) {
+                $("#aJob").removeClass("AHeaderNav");
+                $("#aJob").addClass("AHeaderNav2");
+            }
+            else if (aurl.indexOf("Personal") > -1) {
+                $("#aPersonal").removeClass("AHeaderNav");
+                $("#aPersonal").addClass("AHeaderNav2");
+            }
+            else if (aurl.indexOf("CitySameList.aspx?Type=1") > -1) {
+                $("#aCitySame").removeClass("AHeaderNav");
+                $("#aCitySame").addClass("AHeaderNav2");
+            }
+            else if (aurl.indexOf("CitySame") > -1) {
+                $("#aCitySame1").removeClass("AHeaderNav");
+                $("#aCitySame1").addClass("AHeaderNav2");
+            }
+            else if (aurl.indexOf("Information") > -1) {
+                $("#aInformation").removeClass("AHeaderNav");
+                $("#aInformation").addClass("AHeaderNav2");
+            }
+            else {
+                $("#aindex").removeClass("AHeaderNav");
+                $("#aindex").addClass("AHeaderNav2");
+            }
+        }
+    });
+</script>
+
+        <!--ContentWap-->
+        <link rel="stylesheet" type="text/css" href="css/personnel.css" />
+        <div id="ContentWap">
+            <!--Boxoption-->
+            <div class="ContentBox1200">
+                <div class="Boxoption">
+                    <div class="BoxoptionSearch layui-form">
+                        <div class="BoxoptionSearchBox">
+                            <input id="txtSerchKey" type="text" style="width: 1068px;" class="BoxoptionInput2" placeholder="可搜索：求职职位" />
+                            <div class="BoxoptionInput4"><i class="layui-icon layui-icon-search F30" onclick="CheckSerchKey();"></i></div>
+                        </div>
+                        <div class="clear0"></div>
+                    </div>
+                    <div class="BoxoptionBox">
+                        <table>
+                            <tr>
+                                <td width="80" valign="top" class="F999">工作区域：</td>
+                                <td align="left" id="ulAear">
+                                    <a href="#" class="APtion2" onclick="CheckAear('')">不限</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="80" valign="top" class="F999">工作年限：</td>
+                                <td align="left" id="ulWages">
+                                    <a href="#" class="APtion2" onclick="CheckWages('')">不限</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="80" valign="top" class="F999">求职职位：</td>
+                                <td align="left" id="ulJobName">
+                                    <a href="#" class="APtion2" onclick="CheckJobName('')">不限</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="80" valign="top" class="F999">最高学历：</td>
+                                <td align="left" id="ulWelfare">
+                                    <a href="#" class="APtion2" onclick="CheckWelfare('')">不限</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!--BoxList-->
+            <div class="ContentBox1200">
+                <div class="BoxList">
+                    <div class="BoxListLeft">
+                        <div id="divContent"></div>
+                        <div class="WebPape" id="WebPape" style="text-align:center;"></div>
+                    </div>
+                    <div class="BoxListRight">
+                        <div class="BoxListTop">
+                            <h3>智能推荐</h3>
+                        </div>
+                        <div class="BoxListRightBox">
+                            
+                                    <a href='http://www.nkjfrc.com/PersonalDetail.aspx?ID=23114' class="BoxListRightListBox"><span class="F09C">朱**</span><br />
+                                        <span class="F999">男&nbsp;&nbsp;44岁&nbsp;&nbsp;高中&nbsp;&nbsp;10年以上</span><br />
+                                        <span>面漆</span></a>
+                                
+                                    <a href='http://www.nkjfrc.com/PersonalDetail.aspx?ID=19133' class="BoxListRightListBox"><span class="F09C">张**</span><br />
+                                        <span class="F999">男&nbsp;&nbsp;35岁&nbsp;&nbsp;高中&nbsp;&nbsp;3年</span><br />
+                                        <span>承接三轮车货运</span></a>
+                                
+                                    <a href='http://www.nkjfrc.com/PersonalDetail.aspx?ID=20644' class="BoxListRightListBox"><span class="F09C">廖</span><br />
+                                        <span class="F999">男&nbsp;&nbsp;29岁&nbsp;&nbsp;高中&nbsp;&nbsp;</span><br />
+                                        <span>扪布炒更。</span></a>
+                                
+                                    <a href='http://www.nkjfrc.com/PersonalDetail.aspx?ID=23037' class="BoxListRightListBox"><span class="F09C">赖**</span><br />
+                                        <span class="F999">男&nbsp;&nbsp;44岁&nbsp;&nbsp;&nbsp;&nbsp;10年以上</span><br />
+                                        <span>面漆</span></a>
+                                
+                                    <a href='http://www.nkjfrc.com/PersonalDetail.aspx?ID=21682' class="BoxListRightListBox"><span class="F09C">梁**</span><br />
+                                        <span class="F999">男&nbsp;&nbsp;33岁&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                                        <span>承接货运15979776370</span></a>
+                                
+                                    <a href='http://www.nkjfrc.com/PersonalDetail.aspx?ID=22598' class="BoxListRightListBox"><span class="F09C">赖**</span><br />
+                                        <span class="F999">男&nbsp;&nbsp;48岁&nbsp;&nbsp;&nbsp;&nbsp;10年以上</span><br />
+                                        <span>出榫打眼  电话：18779710663</span></a>
+                                
+                                    <a href='http://www.nkjfrc.com/PersonalDetail.aspx?ID=22644' class="BoxListRightListBox"><span class="F09C">郭</span><br />
+                                        <span class="F999">男&nbsp;&nbsp;16岁&nbsp;&nbsp;初中&nbsp;&nbsp;10年以上</span><br />
+                                        <span>喷漆</span></a>
+                                
+                                    <a href='http://www.nkjfrc.com/PersonalDetail.aspx?ID=21764' class="BoxListRightListBox"><span class="F09C">陈**</span><br />
+                                        <span class="F999">女&nbsp;&nbsp;21岁&nbsp;&nbsp;高中&nbsp;&nbsp;3年</span><br />
+                                        <span>客服，文员</span></a>
+                                
+                                    <a href='http://www.nkjfrc.com/PersonalDetail.aspx?ID=19545' class="BoxListRightListBox"><span class="F09C">何**</span><br />
+                                        <span class="F999">男&nbsp;&nbsp;29岁&nbsp;&nbsp;初中&nbsp;&nbsp;3年</span><br />
+                                        <span>承包临时货运！自带4.2米！</span></a>
+                                
+                                    <a href='http://www.nkjfrc.com/PersonalDetail.aspx?ID=20923' class="BoxListRightListBox"><span class="F09C">刘</span><br />
+                                        <span class="F999">男&nbsp;&nbsp;30岁&nbsp;&nbsp;初中&nbsp;&nbsp;10年以上</span><br />
+                                        <span>跟车，普工，临时工，帮工</span></a>
+                                
+                        </div>
+                    </div>
+                    <div class="clear0"></div>
+                </div>
+            </div>
+            <!---->
+        </div>
+        <!--ContentWap End-->
+
+
+        <!--Footer-->
+        
+<div id="Footer">
+<div class="Footer">
+<div class="ContentBox1200">
+<div class="FooterBox1">
+<div><img src="/images/CuService.jpg"></div>
+<div class="show10 FCCC">客服热线</div>
+<div class="FF30 F28">0797-6633069</div>
+<div class="show10 FCCC">工作时间：9:00~19:00</div>
+</div>
+<div class="FooterBox4"></div>
+<div class="FooterBox2"><strong>关于我们</strong>
+    
+            <br /><a href="/InformationDetail.aspx?ID=f0bba3c4c21a4135a37a26ab24838f4f" class="AF999">关于九方</a>
+        
+            <br /><a href="/InformationDetail.aspx?ID=3d7202c1da7040d0b020ab478991a1e5" class="AF999">现场招聘</a>
+        
+            <br /><a href="/InformationDetail.aspx?ID=16eafad00a2f40b4964744a8d9b8a4e7" class="AF999">联系我们</a>
+        
+</div>
+<div class="FooterBox2"><strong>客户服务</strong>
+    
+            <br /><a href="/InformationDetail.aspx?ID=623a7ae77c0247a19acca45019e63f63" class="AF999">客服中心</a>
+        
+            <br /><a href="/InformationDetail.aspx?ID=5d1ef6f9f97f48a3a81d5b696047785e" class="AF999">广告投放</a>
+        
+            <br /><a href="/InformationDetail.aspx?ID=4e5d8e2f962842159daed4816a14c497" class="AF999">线下门店</a>
+        
+            <br /><a href="/InformationDetail.aspx?ID=a6d4378abcb94ebd88e7d7dbfbb73e09" class="AF999">网站声明</a>
+        
+</div>
+<div class="FooterBox2"><strong>帮助中心</strong>
+    
+            <br /><a href="/InformationDetail.aspx?ID=748ebbdb6a8245b3b78771092835f969" class="AF999">帮助中心</a>
+        
+            <br /><a href="/InformationDetail.aspx?ID=453ffa2bf1664168a22a29e79fcc6c00" class="AF999">常见问题</a>
+        
+            <br /><a href="/InformationDetail.aspx?ID=d345cbcf42d64fd289cbcef789e1aff7" class="AF999">新手引导</a>
+        
+</div>
+<div class="FooterBox2" style="display:none;"><strong>合作共赢</strong>
+    
+</div>
+<div class="FooterBox4"></div>
+<div class="FooterBox3"><img src="/images/Footerwxer.jpg"></div>
+<div class="clear0"></div>
+</div>
+</div>
+<div class="FooterCopyright">CopyRight  2018 赣州市南康区九方人力资源服务有限公司 All Rights Reserved. <br />赣ICP备15008401号-1</div>
+</div>
+
+
+
+        <!-- 文件JS -->
+        <script>
+            $(function () {
+                //搜索下拉
+                layui.use(['form', 'layer'], function () {
+                    var form = layui.form, layer = layui.layer;
+                });
+            });
+        </script>
+        <script src="js/footerjs.js" charset="utf-8"></script>
+        <!---->
+    </form>
+</body>
+</html>

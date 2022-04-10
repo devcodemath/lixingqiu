@@ -1,0 +1,11 @@
+What is dictionary in Python?  什么是字典?
+How to create a dictionary?   如何创建字典?
+How to access elements from a dictionary? 如何访问字典元素?
+How to change or add elements in a dictionary? 如何改变或添加字典元素?
+How to delete or remove elements from a dictionary? 如何删除或移去字典里的元素?
+Python Dictionary Methods                           字典方法.
+Python Dictionary Comprehension                     字典推导式
+Other Dictionary Operations                         其它的字典操作.
+   Dictionary Membership Test   (用in)              字典成员测试
+   Iterating Through a Dictionary                   迭代字典项目
+ 

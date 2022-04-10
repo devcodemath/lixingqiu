@@ -1,0 +1,2 @@
+本程序需要sprites模块支持,请先有pip安装sprites模块.
+如果安装较慢经常中断，可以把pip.ini复制到Python安装目录的Scripts文件夹,这样再次安装就快了。
